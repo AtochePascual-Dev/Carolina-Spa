@@ -1,0 +1,37 @@
+@use "variables" as v;
+
+/** Media Queries **/
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin boton($bgColor, $colorTexto) {
+  background-color: $bgColor;
+  padding: 2rem 2rem;
+  color: $colorTexto;
+  margin-top: 2rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color;
+  transition-duration: 300ms;
+
+  @include tablet {
+    width: auto;
+  }
+  &:hover {
+    background-color: darken($bgColor, 10%);
+  }
+}
