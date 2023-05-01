@@ -35,3 +35,21 @@
     background-color: darken($bgColor, 10%);
   }
 }
+
+@mixin titulo {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: v.$fuenteCursiva;
+  font-size: 4rem;
+  line-height: 0.8;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: v.$secundario;
+
+  span {
+    display: block;
+    font-family: v.$fuentePrincipal;
+    text-transform: uppercase;
+    color: v.$negro;
+  }
+}
