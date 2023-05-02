@@ -1,0 +1,55 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.header {
+  padding-top: 2rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    @include m.tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.navegacion-redes {
+  display: flex;
+  gap: 1rem;
+
+  &__link {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &[href*="facebook.com"]::before {
+      background-image: url("../img/icono_facebook.svg");
+    }
+    &[href*="instagram.com"]::before {
+      background-image: url("../img/icono_instagram.svg");
+    }
+    &[href*="twitter.com"]::before {
+      background-image: url("../img/icono_twitter.svg");
+    }
+    &[href*="youtube.com"]::before {
+      background-image: url("../img/icono_youtube.svg");
+    }
+    &[href*="tiktok.com"]::before {
+      background-image: url("../img/icono_tiktok.svg");
+    }
+  }
+
+  &__accesible {
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+  }
+}

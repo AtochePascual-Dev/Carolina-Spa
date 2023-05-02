@@ -1,0 +1,61 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.cards {
+  padding: 8rem 0 5rem;
+  overflow: hidden;
+
+  &__grid {
+    display: grid;
+    gap: 3rem;
+    justify-items: center;
+
+    @include m.tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 35rem;
+
+  @include m.tablet {
+    max-width: unset;
+  }
+
+  &__figure {
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border: 0.5rem solid v.$blanco;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.3) rotate(4deg);
+    }
+  }
+
+  &__descripcion {
+    position: relative;
+    max-width: 90%;
+    padding: 0.5rem 2rem;
+    margin: -5rem auto 0;
+    background-color: v.$blanco;
+  }
+
+  &__titulo {
+    @include m.titulo;
+    font-size: 3rem;
+  }
+
+  &__enlace {
+    @include m.boton(v.$secundario, v.$blanco);
+    display: block;
+    padding: 0.5rem 0;
+  }
+}

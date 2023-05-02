@@ -1,0 +1,19 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.bienvenida {
+  padding-top: 5rem;
+  text-align: center;
+
+  &__titulo {
+    @include m.titulo;
+  }
+
+  &__texto {
+    max-width: 50rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    line-height: 2;
+    color: v.$gris;
+  }
+}

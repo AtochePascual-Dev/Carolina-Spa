@@ -1,0 +1,55 @@
+@use "variables" as v;
+
+/** Media Queries **/
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin boton($bgColor, $colorTexto) {
+  background-color: $bgColor;
+  padding: 2rem 2rem;
+  color: $colorTexto;
+  margin-top: 2rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color;
+  transition-duration: 300ms;
+
+  @include tablet {
+    width: auto;
+  }
+  &:hover {
+    background-color: darken($bgColor, 10%);
+  }
+}
+
+@mixin titulo {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: v.$fuenteCursiva;
+  font-size: 4rem;
+  line-height: 0.8;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: v.$secundario;
+
+  span {
+    display: block;
+    font-family: v.$fuentePrincipal;
+    text-transform: uppercase;
+    color: v.$negro;
+  }
+}
