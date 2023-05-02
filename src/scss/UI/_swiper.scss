@@ -1,0 +1,23 @@
+@use "../base/variables" as v;
+
+.swiper {
+  max-width: 90rem;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-img {
+  width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: v.$primario;
+}

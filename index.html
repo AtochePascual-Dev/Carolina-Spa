@@ -12,6 +12,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&display=swap"
 		rel="stylesheet">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<!-- Css -->
 	<link rel="stylesheet" href="build/css/app.css">
 </head>
@@ -55,18 +57,37 @@
 		</nav>
 	</div>
 
-	<section class="slider">
-		<ul class="slider-container">
-			<li class="slider__slide">
+	<section class="swiper mySwiper">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide">
+				<figure>
+					<picture>
+						<source srcset="./build/img/slide_01.avif" type="image/avif">
+						<source srcset="./build/img/slide_01.webp" type="image/webp">
+						<img class="swiper-img" src="./build/img/slide_01.jpg" alt="imagen slide 1" loading="lazy">
+					</picture>
+				</figure>
+			</li>
+			<li class="swiper-slide">
 				<figure>
 					<picture>
 						<source srcset="./build/img/slide_02.avif" type="image/avif">
 						<source srcset="./build/img/slide_02.webp" type="image/webp">
-						<img src="./build/img/slide_02.jpg" alt="imagen slide 1" loading="lazy">
+						<img class="swiper-img" src="./build/img/slide_02.jpg" alt="imagen slide 1" loading="lazy">
+					</picture>
+				</figure>
+			</li>
+			<li class="swiper-slide">
+				<figure>
+					<picture>
+						<source srcset="./build/img/slide_03.avif" type="image/avif">
+						<source srcset="./build/img/slide_03.webp" type="image/webp">
+						<img class="swiper-img" src="./build/img/slide_03.jpg" alt="imagen slide 1" loading="lazy">
 					</picture>
 				</figure>
 			</li>
 		</ul>
+		<div class="swiper-pagination"></div>
 	</section>
 
 
@@ -318,6 +339,9 @@
 
 		<p class="footer__copy">Todos los derechos reservados &copy;</p>
 	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="./src/js/app.js"></script>
 </body>
 
 </html>
